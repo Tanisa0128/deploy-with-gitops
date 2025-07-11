@@ -3,6 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: podinfo-service
+  namespace: podinfo
 spec:
   chart:
     spec:
@@ -20,6 +21,11 @@ spec:
     ui:
       color: "#cd5b1c"
       message: "Hello, I am podinfo version latest-20250621130825. Hi Tanisa, Good day."
+    service:
+      type: NodePort
+      nodePort: 32570        
+      port: 9898              
+      targetPort: 9898        
   install:
     createNamespace: true
   uninstall:
