@@ -20,7 +20,7 @@ spec:
       pullPolicy: IfNotPresent
     ui:
       color: "#cd5b1c"
-      message: "Hello, I am podinfo version latest-20250621130825. Hi Tanisa, Good day."
+      message: "Hello, I am podinfo version latest-20250621130825. Hi Tanisa, Good evening."
     service:
       type: NodePort
       nodePort: 32570        
